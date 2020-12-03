@@ -1,0 +1,68 @@
+VERSION=2.0
+CONFUSE_SCORE=80
+ENTRANCE_OPEN
+DOMAIN:scene319c4df903424d0db408803c058b4e12
+
+
+#nodeName:1+13对应地市招聘公告发布
+node0594624703088388
+
+#信息提取
+
+search:city=([t_地市名称])
+
+#触发条件
+
+e:["地市名称","RE:^.*([t_地市名称]).*","南通市怎么领取失业金","南通市","南通市失业保险丧葬补助金的申请方式","南通市申领方式","南通"]
+
+#执行操作
+
+a: [answer]
+execut:city=南京 THEN answer="南京市事业单位公开招聘信息发布在南京市人力资源和社会保障局官网（地址：http://rsj.nanjing.gov.cn/）。"
+execut:city=南通 THEN answer="南通市事业单位公开招聘信息发布在南通市人力资源和社会保障局官网（地址：rsj.nantong.gov.cn）、南通党建网(www.ntdj.gov.cn)、南通人事考试网上服务平台(rsks.rsj.nantong.gov.cn)。"
+execut:city=苏州 THEN answer="苏州市事业单位公开招聘信息发布在苏州市人力资源和社会保障局官网（地址：http://hrss.suzhou.gov.cn/）。"
+execut:city=无锡 THEN answer="无锡市事业单位公开招聘信息发布在无锡市人力资源和社会保障局官网（地址：http://hrss.wuxi.gov.cn）、无锡人事考试专栏（http://hrss.wuxi.gov.cn/ztzl/wxrskszl/index.shtml）。"
+execut:city=扬州 THEN answer="扬州市事业单位公开招聘信息发布在扬州市人力资源和社会保障局官网（地址：http://hrss.yangzhou.gov.cn/）。"
+execut:city=淮安 THEN answer="淮安市事业单位公开招聘信息发布在淮安市人力资源和社会保障局官网（地址：http://rsj.huaian.gov.cn/）。"
+execut:city=常州 THEN answer="常州市事业单位公开招聘信息发布在常州市人力资源和社会保障局官网（地址：rsj.changzhou.gov.cn）。"
+execut:city=宿迁 THEN answer="宿迁市事业单位公开招聘信息发布在宿迁市人力资源和社会保障局官网（地址：http://sqhrss.suqian.gov.cn）。"
+execut:city=徐州 THEN answer="徐州市事业单位公开招聘信息发布在徐州党建网(www.xzdj.cn)、徐州市人力资源和社会保障局官网(www.jsxzhrss.gov.cn)、徐州人事考试网(www.xzrsks.com)、招聘单位主管部门门户网站，详情可咨询当地。"
+execut:city=泰州 THEN answer="泰州市事业单位公开招聘信息发布在泰州市人力资源和社会保障局官网（地址：rsj.taizhou.gov.cn）。"
+execut:city=盐城 THEN answer="盐城市事业单位公开招聘信息发布在盐城市人力资源和社会保障局官网（地址：http://jsychrss.yancheng.gov.cn/index.html）。"
+execut:city=省级 THEN answer="省属事业单位公开招聘信息发布均在江苏省人力资源和社会保障厅官网（地址：http://jshrss.jiangsu.gov.cn/）下招考公告栏目。"
+execut:city=连云港 THEN answer="连云港市事业单位公开招聘信息发布在连云港市人力资源和社会保障局官网（地址：http://rsj.lyg.gov.cn）。"
+execut:city=镇江 THEN answer="镇江市事业单位公开招聘信息发布在镇江市人力资源和社会保障局官网（地址：http://hrss.zhenjiang.gov.cn/）。"
+execut:!city THEN answer="请问您要咨询的是哪个地市？"
+childs:[0594624703088388]
+
+#nodeName:start省事业单位公开招聘公告发布
+node06233805516777042#
+
+#信息提取
+
+search:city=([t_地市名称])
+
+#触发条件
+
+e:["[t_地市名称]事业单位公开招聘公告发布的地址、发布的时间、报名方式、报名时间","[t_地市名称]事业单位公开招聘公告发布的报名方式","事业单位公开招聘公告什么时候发布","[t_地市名称]事业单位公开招聘公告什么时候发布","[t_地市名称]事业单位公开招聘公告发布的报名时间","[t_地市名称]事业单位公开招聘公告发布的时间","[t_地市名称]事业单位公开招聘的信息在什么地方发布","[t_地市名称]事业单位公开招聘通过什么方式报名","[t_地市名称]事业单位公开招聘什么时候开始","事业单位公开招聘公告什么时候出来","[t_地市名称]事业单位公开招聘怎么报名"]
+
+#执行操作
+
+a:[answer]
+execut:city=南京 THEN answer="南京市事业单位公开招聘信息发布在南京市人力资源和社会保障局官网（地址：http://rsj.nanjing.gov.cn）。"
+execut:city=南通 THEN answer="南通市事业单位公开招聘信息发布在南通市人力资源和社会保障局官网（地址：rsj.nantong.gov.cn）、南通党建网(www.ntdj.gov.cn)、南通人事考试网上服务平台(rsks.rsj.nantong.gov.cn)。"
+execut:city=苏州 THEN answer="苏州市事业单位公开招聘信息发布在苏州市人力资源和社会保障局官网（地址：http://hrss.suzhou.gov.cn/）。"
+execut:city=无锡 THEN answer="无锡市事业单位公开招聘信息发布在无锡市人力资源和社会保障局官网（地址：http://hrss.wuxi.gov.cn）、无锡人事考试专栏（http://hrss.wuxi.gov.cn/ztzl/wxrskszl/index.shtml）。"
+execut:city=扬州 THEN answer="扬州市事业单位公开招聘信息发布在扬州市人力资源和社会保障局官网（地址：http://hrss.yangzhou.gov.cn/）。"
+execut:city=淮安 THEN answer="淮安市事业单位公开招聘信息发布在淮安市人力资源和社会保障局官网（地址：http://rsj.huaian.gov.cn/）。"
+execut:city=常州 THEN answer="常州市事业单位公开招聘信息发布在常州市人力资源和社会保障局官网（地址：rsj.changzhou.gov.cn）。"
+execut:city=宿迁 THEN answer="宿迁市事业单位公开招聘信息发布在宿迁市人力资源和社会保障局官网（地址：http://sqhrss.suqian.gov.cn）。"
+execut:city=徐州 THEN answer="徐州市事业单位公开招聘信息发布在徐州党建网(www.xzdj.cn)、徐州市人力资源和社会保障局官网(www.jsxzhrss.gov.cn)、徐州人事考试网(www.xzrsks.com)、招聘单位主管部门门户网站，详情可咨询当地。"
+execut:city=泰州 THEN answer="泰州市事业单位公开招聘信息发布在泰州市人力资源和社会保障局官网（地址：rsj.taizhou.gov.cn）。"
+execut:city=盐城 THEN answer="盐城市事业单位公开招聘信息发布在盐城市人力资源和社会保障局官网（地址：http://jsychrss.yancheng.gov.cn/index.html）。"
+execut:city=省级 THEN answer="省属事业单位公开招聘信息发布均在江苏省人力资源和社会保障厅官网（地址：http://jshrss.jiangsu.gov.cn/）下招考公告栏目。"
+execut:city=连云港 THEN answer="连云港市事业单位公开招聘信息发布在连云港市人力资源和社会保障局官网（地址：http://rsj.lyg.gov.cn）。"
+execut:city=镇江 THEN answer="镇江市事业单位公开招聘信息发布在镇江市人力资源和社会保障局官网（地址：http://hrss.zhenjiang.gov.cn/）。"
+execut:!city THEN answer="请问您要咨询的是哪个地市？"
+childs:[0594624703088388]
+
